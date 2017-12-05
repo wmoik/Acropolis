@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ACROPOLIS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap0.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+
+
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">ACROPOLIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Artwork</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="upload.html">Upload
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class= "container">
+      <!-- Page Heading -->
+      <h1 class="my-4">Upload your Artwork
+        <small></small>
+      </h1>
+      <!-- Page Content -->
+
+      <form action="http://localhost:8000/src/upload.php" method="post" enctype="multipart/form-data">
+
+          Title of Cartwork:<br>
+          <input type="text" name="title" id="title"><br><br>
+
+          Description of Cartwork:<br>
+          <textarea name="description" id="description" cols="40" rows="5"></textarea><br><br>
+          <!--<input type="text" name="description" id="description"><br><br>-->
+
+          Artist Name:<br>
+          <input type="text" name="artistalias" id="artistalias"><br><br>
+
+          How many limited editions would you like to make?:<br>
+          <input type="uint256" name="noa"id="noa"><br><br>
+
+          Select image to upload:<br>
+          <input type="file" name="fileToUpload" id="fileToUpload"><br>
+
+          <img id="blah" src="#" alt="" />
+        <br>
+        <p>Your Hash: <span id="hashDisplay"></span></p>
+        <br>
+          <input type="submit" onclick="App.handleUpload()" value="Upload Image" name="submit" id="btn-create"><br>
+          <!--<button class="btn btn-default btn-bid" type="button" data-id="0">Bid</button>-->
+      </form>
+
+
+      <br>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; ACROPOLIS 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+
+
+  </body>
+
+</html>
